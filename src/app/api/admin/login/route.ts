@@ -1,0 +1,2 @@
+import {NextRequest,NextResponse} from "next/server";import {loginOk,createSession} from "@/lib/auth";
+export async function POST(r:NextRequest){const data=await r.json();if(typeof data.email!=="string"||typeof data.password!=="string"||!loginOk(data.email,data.password))return NextResponse.json({error:"Login xato"},{status:401});const res=NextResponse.json({ok:true});res.cookies.set("smart_session",createSession(),{httpOnly:true,secure:process.env.NODE_ENV==="production",sameSite:"lax",path:"/",maxAge:86400});return res}

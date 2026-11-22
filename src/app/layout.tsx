@@ -1,0 +1,3 @@
+import "./globals.css";import Link from "next/link";import type {Metadata} from "next";
+export const metadata:Metadata={title:"Smart Kamera — Aqlli kuzatuv kameralari",description:"Kameralar katalogi va onlayn buyurtma"};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="uz"><body><header><nav><Link className="logo" href="/">SMART KAMERA</Link><div><Link href="/katalog">Katalog</Link>　<Link href="/admin">Admin</Link></div></nav></header>{children}<footer><div className="wrap">© Smart Kamera · Xavfsizlik kameralarining onlayn do'koni</div></footer></body></html>}
