@@ -1,0 +1,15 @@
+# Database - SQLite for local development
+DATABASE_URL="file:./dev.db"
+
+# Telegram Bot (configure after creating bot with @BotFather)
+TELEGRAM_BOT_TOKEN=""
+TELEGRAM_CHAT_ID=""
+
+# Next.js
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+NEXTAUTH_SECRET="dev-secret-change-in-production-min-32-chars-long"
+NEXTAUTH_URL="http://localhost:3000"
+
+# Admin (created via seed)
+ADMIN_EMAIL="admin@securecam.uz"
+ADMIN_PASSWORD="admin123"
